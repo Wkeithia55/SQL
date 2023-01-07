@@ -1,0 +1,48 @@
+CREATE TABLE beauty_supply (id INTEGER PRIMARY KEY, type TEXT, color TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO beauty_supply VALUES (1, "comb", "black", 30, 3)
+;
+INSERT INTO beauty_supply VALUES (2, "hair gel", "purple", 5, 4)
+;
+INSERT INTO beauty_supply VALUES (3, "lip liner", "pink", 15, 2)
+;
+INSERT INTO beauty_supply VALUES (4, "eye liner", "orange", 6, 3)
+;
+INSERT INTO beauty_supply VALUES (5, "bobby pin", "red", 11, 1)
+;
+INSERT INTO beauty_supply VALUES (6, "hair weave", "gold", 20, 5)
+;
+INSERT INTO beauty_supply VALUES (7, "shampoo", "white", 21, 6)
+;
+INSERT INTO beauty_supply VALUES (8, "conditioner", "ivory", 25, 7)
+;
+INSERT INTO beauty_supply VALUES (9, "edge control", "brown", 14, 7)
+;
+INSERT INTO beauty_supply VALUES (10, "hot curler", "metallic", 10, 9)
+;
+INSERT INTO beauty_supply VALUES (11, "curling wand", "magenta", 12, 10)
+;
+INSERT INTO beauty_supply VALUES (12, "headband", "blue", 16, 3)
+;
+INSERT INTO beauty_supply VALUES (13, "scarf", "hot pink", 5, 2)
+;
+INSERT INTO beauty_supply VALUES (14, "lipstick", "ruby woo", 13, 7)
+;
+INSERT INTO beauty_supply VALUES (15, "hand wipes", "yellow", 10 , 8)
+
+
+/*to order by most expensive:*/
+;
+SELECT * FROM beauty_supply
+
+ORDER BY price DESC;
+
+/*cost if you buy one of each item:*/
+SELECT SUM (price) FROM beauty_supply;
+
+/*number of items in the store:*/
+SELECT SUM (quantity) FROM beauty_supply;
+
+/*find cheapest items:*/
+SELECT * FROM beauty_supply
+    WHERE price <5;
